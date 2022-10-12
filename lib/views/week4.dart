@@ -3,6 +3,7 @@ part of 'pages.dart';
 
 class Week4 extends StatefulWidget {
   const Week4({super.key});
+  static const String routeName = '/Week4';
 
   @override
   State<Week4> createState() => _MyWidgettState();
@@ -141,7 +142,38 @@ class _MyWidgettState extends State<Week4> {
                 size: 30,
               ),
             ),
+          ),
+          // Elevated Button for extended project
+
+          Container(
+            alignment: Alignment.bottomRight,
+            padding: EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 10.0),
+            child: FloatingActionButton(
+              backgroundColor: Colors.black,
+              // backgroundColor: LinearGradient(
+              //       begin: Alignment.topCenter,
+              //       end: Alignment(0.8, 1),
+              //       colors: <Color>[
+              //     Color(0xff1f005c),
+              //     Color(0xff5b0060),
+              //     Color(0xff870160),
+              //     Color(0xffac255e),
+              //     Color(0xffca485c),
+              //     Color(0xffe16b5c),
+              //     Color(0xfff39060),
+              //     Color(0xffffb56b),
+              //   ]),
+              onPressed: () {
+                Navigator.pushNamed(context, AddAnimal.routeName);
+                setState(() {
+                  click = !click;
+                });
+                print('This is a layouting project trial');
+              },
+              child: Text("Add new Animal"),
+            ),
           )
+          // Elevated Button for extended project end
         ],
       ),
     );

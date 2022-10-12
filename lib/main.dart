@@ -1,7 +1,6 @@
 import 'package:flutter_please_3/views/pages.dart';
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -11,7 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Week4());
+    return MaterialApp(home: AddAnimal());
   }
 }
